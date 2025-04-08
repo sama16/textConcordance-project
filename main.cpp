@@ -8,10 +8,12 @@ int main(int argc, char* argv[]) {
     std::cout << "|==========================================================================|" << std::endl;
     std::cout << "|                      T E X T    C O N C O R D A N C E                    |" << std::endl;
     std::cout << "|==========================================================================|" << std::endl;
+
     if (argc != 2) {
-        std::cerr << "Usage: " << argv[0] << " <input(2).txt>" << std::endl;
+        std::cerr << "Usage: " << argv[0] << " <input_file.txt>" << std::endl;
         return 1;
     }
+
     std::ifstream inputFile(argv[1]);
     if (!inputFile.is_open()) {
         std::cerr << "Error opening file: " << argv[1] << std::endl;
@@ -27,7 +29,7 @@ int main(int argc, char* argv[]) {
         std::string word;
 
         while (stream >> word) {
-            word = AVLTree::cleanWord(word);  // Clean the word
+            word = AVLTree::cleanWord(word);
             if (!word.empty()) {
                 concordance.insert(word, lineNum);
             }
@@ -36,6 +38,6 @@ int main(int argc, char* argv[]) {
     }
 
     inputFile.close();
-    concordance.display();  // Display the concordance
+    concordance.display();
     return 0;
 }
