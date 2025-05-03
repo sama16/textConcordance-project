@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/_deps/curl-src/include/curl/curlver.h
+
+C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/_deps/curl-src/lib/libcurl.rc
+winver.h
+-
+../include/curl/curlver.h
+C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/_deps/curl-src/include/curl/curlver.h
+

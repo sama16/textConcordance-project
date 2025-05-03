@@ -1,0 +1,3 @@
+C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/_deps/cpr-subbuild/CMakeFiles/cpr-populate.dir
+C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/_deps/cpr-subbuild/CMakeFiles/edit_cache.dir
+C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/_deps/cpr-subbuild/CMakeFiles/rebuild_cache.dir

@@ -2,6 +2,7 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+#include <iostream>
 #include "avl_tree.h"
 
 int main(int argc, char* argv[]) {
@@ -21,6 +22,7 @@ int main(int argc, char* argv[]) {
     }
 
     AVLTree concordance;
+    Dictionarry d1;
     std::string line;
     int lineNum = 1;
 
@@ -29,7 +31,7 @@ int main(int argc, char* argv[]) {
         std::string word;
 
         while (stream >> word) {
-            word = AVLTree::cleanWord(word);
+            word = concordance.cleanWord(word);
             if (!word.empty()) {
                 concordance.insert(word, lineNum);
             }
@@ -39,5 +41,13 @@ int main(int argc, char* argv[]) {
 
     inputFile.close();
     concordance.display();
+    concordance.findWordsExceedingThreshold(2);
+
+    // d1.my_library();
+    // d1.display2();
+    // cout <<endl;
+
+     // d1.search("happy");
+
     return 0;
 }

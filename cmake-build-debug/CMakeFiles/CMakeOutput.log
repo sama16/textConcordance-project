@@ -1,0 +1,139 @@
+Performing Curl Test HAVE_IOCTLSOCKET passed with the following output:
+Change Dir: 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.3.2/bin/cmake/win/x64/bin/cmake.exe" -E env VERBOSE=1 C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_a3cfb/fast
+mingw32-make.exe[1]: Entering directory 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\cmTC_a3cfb.dir\build.make CMakeFiles/cmTC_a3cfb.dir/build
+mingw32-make.exe[2]: Entering directory 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a3cfb.dir/CurlTests.c.obj
+C:\msys\mingw64\bin\cc.exe   -pedantic -Wall -W -Wpointer-arith -Wwrite-strings -Wunused -Wshadow -Winline -Wnested-externs -Wmissing-declarations -Wmissing-prototypes -Wfloat-equal -Wsign-compare -Wundef -Wendif-labels -Wstrict-prototypes -Wdeclaration-after-statement -Wstrict-aliasing=3 -Wcast-align -Wtype-limits -Wold-style-declaration -Wmissing-parameter-type -Wempty-body -Wclobbered -Wignored-qualifiers -Wconversion -Wvla -Wdouble-promotion -Wno-long-long -Wno-multichar -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wno-pedantic-ms-format -DHAVE_IOCTLSOCKET  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_STDIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_PROCESS_H -DHAVE_STDDEF_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -o CMakeFiles\cmTC_a3cfb.dir\CurlTests.c.obj -c C:\Users\hemac\Downloads\textConcordance-project\cmake-build-debug\_deps\curl-src\CMake\CurlTests.c
+C:\Users\hemac\Downloads\textConcordance-project\cmake-build-debug\_deps\curl-src\CMake\CurlTests.c:236:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+  236 | main ()
+      | ^~~~
+C:\Users\hemac\Downloads\textConcordance-project\cmake-build-debug\_deps\curl-src\CMake\CurlTests.c: In function 'main':
+C:\Users\hemac\Downloads\textConcordance-project\cmake-build-debug\_deps\curl-src\CMake\CurlTests.c:241:24: warning: 'socket' is used uninitialized [-Wuninitialized]
+  241 |  unsigned long flags = ioctlsocket(socket, FIONBIO, &flags);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\hemac\Downloads\textConcordance-project\cmake-build-debug\_deps\curl-src\CMake\CurlTests.c:240:6: note: 'socket' was declared here
+  240 |  int socket;
+      |      ^~~~~~
+Linking C executable cmTC_a3cfb.exe
+"C:\Program Files\JetBrains\CLion 2024.3.2\bin\cmake\win\x64\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_a3cfb.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2024.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_a3cfb.dir/objects.a
+C:\msys\mingw64\bin\ar.exe qc CMakeFiles\cmTC_a3cfb.dir/objects.a @CMakeFiles\cmTC_a3cfb.dir\objects1.rsp
+C:\msys\mingw64\bin\cc.exe  -pedantic -Wall -W -Wpointer-arith -Wwrite-strings -Wunused -Wshadow -Winline -Wnested-externs -Wmissing-declarations -Wmissing-prototypes -Wfloat-equal -Wsign-compare -Wundef -Wendif-labels -Wstrict-prototypes -Wdeclaration-after-statement -Wstrict-aliasing=3 -Wcast-align -Wtype-limits -Wold-style-declaration -Wmissing-parameter-type -Wempty-body -Wclobbered -Wignored-qualifiers -Wconversion -Wvla -Wdouble-promotion -Wno-long-long -Wno-multichar -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wno-pedantic-ms-format -DHAVE_IOCTLSOCKET  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_STDIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_PROCESS_H -DHAVE_STDDEF_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -Wl,--whole-archive CMakeFiles\cmTC_a3cfb.dir/objects.a -Wl,--no-whole-archive -o cmTC_a3cfb.exe -Wl,--out-implib,libcmTC_a3cfb.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_a3cfb.dir\linkLibs.rsp
+mingw32-make.exe[2]: Leaving directory 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe[1]: Leaving directory 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Performing Curl Test HAVE_BOOL_T passed with the following output:
+Change Dir: 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.3.2/bin/cmake/win/x64/bin/cmake.exe" -E env VERBOSE=1 C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_17a3c/fast
+mingw32-make.exe[1]: Entering directory 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\cmTC_17a3c.dir\build.make CMakeFiles/cmTC_17a3c.dir/build
+mingw32-make.exe[2]: Entering directory 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_17a3c.dir/CurlTests.c.obj
+C:\msys\mingw64\bin\cc.exe   -pedantic -Wall -W -Wpointer-arith -Wwrite-strings -Wunused -Wshadow -Winline -Wnested-externs -Wmissing-declarations -Wmissing-prototypes -Wfloat-equal -Wsign-compare -Wundef -Wendif-labels -Wstrict-prototypes -Wdeclaration-after-statement -Wstrict-aliasing=3 -Wcast-align -Wtype-limits -Wold-style-declaration -Wmissing-parameter-type -Wempty-body -Wclobbered -Wignored-qualifiers -Wconversion -Wvla -Wdouble-promotion -Wno-long-long -Wno-multichar -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wno-pedantic-ms-format -DHAVE_BOOL_T  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_STDIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_PROCESS_H -DHAVE_STDDEF_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -o CMakeFiles\cmTC_17a3c.dir\CurlTests.c.obj -c C:\Users\hemac\Downloads\textConcordance-project\cmake-build-debug\_deps\curl-src\CMake\CurlTests.c
+C:\Users\hemac\Downloads\textConcordance-project\cmake-build-debug\_deps\curl-src\CMake\CurlTests.c:169:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+  169 | main ()
+      | ^~~~
+Linking C executable cmTC_17a3c.exe
+"C:\Program Files\JetBrains\CLion 2024.3.2\bin\cmake\win\x64\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_17a3c.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2024.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_17a3c.dir/objects.a
+C:\msys\mingw64\bin\ar.exe qc CMakeFiles\cmTC_17a3c.dir/objects.a @CMakeFiles\cmTC_17a3c.dir\objects1.rsp
+C:\msys\mingw64\bin\cc.exe  -pedantic -Wall -W -Wpointer-arith -Wwrite-strings -Wunused -Wshadow -Winline -Wnested-externs -Wmissing-declarations -Wmissing-prototypes -Wfloat-equal -Wsign-compare -Wundef -Wendif-labels -Wstrict-prototypes -Wdeclaration-after-statement -Wstrict-aliasing=3 -Wcast-align -Wtype-limits -Wold-style-declaration -Wmissing-parameter-type -Wempty-body -Wclobbered -Wignored-qualifiers -Wconversion -Wvla -Wdouble-promotion -Wno-long-long -Wno-multichar -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wno-pedantic-ms-format -DHAVE_BOOL_T  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_STDIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_PROCESS_H -DHAVE_STDDEF_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -Wl,--whole-archive CMakeFiles\cmTC_17a3c.dir/objects.a -Wl,--no-whole-archive -o cmTC_17a3c.exe -Wl,--out-implib,libcmTC_17a3c.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_17a3c.dir\linkLibs.rsp
+mingw32-make.exe[2]: Leaving directory 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe[1]: Leaving directory 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Performing Curl Test HAVE_FILE_OFFSET_BITS passed with the following output:
+Change Dir: 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.3.2/bin/cmake/win/x64/bin/cmake.exe" -E env VERBOSE=1 C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_3917a/fast
+mingw32-make.exe[1]: Entering directory 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\cmTC_3917a.dir\build.make CMakeFiles/cmTC_3917a.dir/build
+mingw32-make.exe[2]: Entering directory 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3917a.dir/CurlTests.c.obj
+C:\msys\mingw64\bin\cc.exe   -pedantic -Wall -W -Wpointer-arith -Wwrite-strings -Wunused -Wshadow -Winline -Wnested-externs -Wmissing-declarations -Wmissing-prototypes -Wfloat-equal -Wsign-compare -Wundef -Wendif-labels -Wstrict-prototypes -Wdeclaration-after-statement -Wstrict-aliasing=3 -Wcast-align -Wtype-limits -Wold-style-declaration -Wmissing-parameter-type -Wempty-body -Wclobbered -Wignored-qualifiers -Wconversion -Wvla -Wdouble-promotion -Wno-long-long -Wno-multichar -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wno-pedantic-ms-format -DHAVE_FILE_OFFSET_BITS  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_STDIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_PROCESS_H -DHAVE_STDDEF_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -o CMakeFiles\cmTC_3917a.dir\CurlTests.c.obj -c C:\Users\hemac\Downloads\textConcordance-project\cmake-build-debug\_deps\curl-src\CMake\CurlTests.c
+C:\Users\hemac\Downloads\textConcordance-project\cmake-build-debug\_deps\curl-src\CMake\CurlTests.c:221:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+  221 | int main () { ; return 0; }
+      |     ^~~~
+Linking C executable cmTC_3917a.exe
+"C:\Program Files\JetBrains\CLion 2024.3.2\bin\cmake\win\x64\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_3917a.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2024.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_3917a.dir/objects.a
+C:\msys\mingw64\bin\ar.exe qc CMakeFiles\cmTC_3917a.dir/objects.a @CMakeFiles\cmTC_3917a.dir\objects1.rsp
+C:\msys\mingw64\bin\cc.exe  -pedantic -Wall -W -Wpointer-arith -Wwrite-strings -Wunused -Wshadow -Winline -Wnested-externs -Wmissing-declarations -Wmissing-prototypes -Wfloat-equal -Wsign-compare -Wundef -Wendif-labels -Wstrict-prototypes -Wdeclaration-after-statement -Wstrict-aliasing=3 -Wcast-align -Wtype-limits -Wold-style-declaration -Wmissing-parameter-type -Wempty-body -Wclobbered -Wignored-qualifiers -Wconversion -Wvla -Wdouble-promotion -Wno-long-long -Wno-multichar -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wno-pedantic-ms-format -DHAVE_FILE_OFFSET_BITS  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_STDIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_PROCESS_H -DHAVE_STDDEF_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -Wl,--whole-archive CMakeFiles\cmTC_3917a.dir/objects.a -Wl,--no-whole-archive -o cmTC_3917a.exe -Wl,--out-implib,libcmTC_3917a.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_3917a.dir\linkLibs.rsp
+mingw32-make.exe[2]: Leaving directory 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe[1]: Leaving directory 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Performing Curl Test HAVE_VARIADIC_MACROS_C99 passed with the following output:
+Change Dir: 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.3.2/bin/cmake/win/x64/bin/cmake.exe" -E env VERBOSE=1 C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_8da07/fast
+mingw32-make.exe[1]: Entering directory 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\cmTC_8da07.dir\build.make CMakeFiles/cmTC_8da07.dir/build
+mingw32-make.exe[2]: Entering directory 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8da07.dir/CurlTests.c.obj
+C:\msys\mingw64\bin\cc.exe   -pedantic -Wall -W -Wpointer-arith -Wwrite-strings -Wunused -Wshadow -Winline -Wnested-externs -Wmissing-declarations -Wmissing-prototypes -Wfloat-equal -Wsign-compare -Wundef -Wendif-labels -Wstrict-prototypes -Wdeclaration-after-statement -Wstrict-aliasing=3 -Wcast-align -Wtype-limits -Wold-style-declaration -Wmissing-parameter-type -Wempty-body -Wclobbered -Wignored-qualifiers -Wconversion -Wvla -Wdouble-promotion -Wno-long-long -Wno-multichar -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wno-pedantic-ms-format -DHAVE_VARIADIC_MACROS_C99  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_STDIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_PROCESS_H -DHAVE_STDDEF_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -o CMakeFiles\cmTC_8da07.dir\CurlTests.c.obj -c C:\Users\hemac\Downloads\textConcordance-project\cmake-build-debug\_deps\curl-src\CMake\CurlTests.c
+C:\Users\hemac\Downloads\textConcordance-project\cmake-build-debug\_deps\curl-src\CMake\CurlTests.c:486:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+  486 | main() {
+      | ^~~~
+Linking C executable cmTC_8da07.exe
+"C:\Program Files\JetBrains\CLion 2024.3.2\bin\cmake\win\x64\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_8da07.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2024.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_8da07.dir/objects.a
+C:\msys\mingw64\bin\ar.exe qc CMakeFiles\cmTC_8da07.dir/objects.a @CMakeFiles\cmTC_8da07.dir\objects1.rsp
+C:\msys\mingw64\bin\cc.exe  -pedantic -Wall -W -Wpointer-arith -Wwrite-strings -Wunused -Wshadow -Winline -Wnested-externs -Wmissing-declarations -Wmissing-prototypes -Wfloat-equal -Wsign-compare -Wundef -Wendif-labels -Wstrict-prototypes -Wdeclaration-after-statement -Wstrict-aliasing=3 -Wcast-align -Wtype-limits -Wold-style-declaration -Wmissing-parameter-type -Wempty-body -Wclobbered -Wignored-qualifiers -Wconversion -Wvla -Wdouble-promotion -Wno-long-long -Wno-multichar -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wno-pedantic-ms-format -DHAVE_VARIADIC_MACROS_C99  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_STDIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_PROCESS_H -DHAVE_STDDEF_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -Wl,--whole-archive CMakeFiles\cmTC_8da07.dir/objects.a -Wl,--no-whole-archive -o cmTC_8da07.exe -Wl,--out-implib,libcmTC_8da07.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_8da07.dir\linkLibs.rsp
+mingw32-make.exe[2]: Leaving directory 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe[1]: Leaving directory 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Performing Curl Test HAVE_VARIADIC_MACROS_GCC passed with the following output:
+Change Dir: 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.3.2/bin/cmake/win/x64/bin/cmake.exe" -E env VERBOSE=1 C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_dcb51/fast
+mingw32-make.exe[1]: Entering directory 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\cmTC_dcb51.dir\build.make CMakeFiles/cmTC_dcb51.dir/build
+mingw32-make.exe[2]: Entering directory 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_dcb51.dir/CurlTests.c.obj
+C:\msys\mingw64\bin\cc.exe   -pedantic -Wall -W -Wpointer-arith -Wwrite-strings -Wunused -Wshadow -Winline -Wnested-externs -Wmissing-declarations -Wmissing-prototypes -Wfloat-equal -Wsign-compare -Wundef -Wendif-labels -Wstrict-prototypes -Wdeclaration-after-statement -Wstrict-aliasing=3 -Wcast-align -Wtype-limits -Wold-style-declaration -Wmissing-parameter-type -Wempty-body -Wclobbered -Wignored-qualifiers -Wconversion -Wvla -Wdouble-promotion -Wno-long-long -Wno-multichar -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wno-pedantic-ms-format -DHAVE_VARIADIC_MACROS_GCC  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_STDIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_PROCESS_H -DHAVE_STDDEF_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -o CMakeFiles\cmTC_dcb51.dir\CurlTests.c.obj -c C:\Users\hemac\Downloads\textConcordance-project\cmake-build-debug\_deps\curl-src\CMake\CurlTests.c
+C:\Users\hemac\Downloads\textConcordance-project\cmake-build-debug\_deps\curl-src\CMake\CurlTests.c:495:32: warning: ISO C does not permit named variadic macros [-Wvariadic-macros]
+  495 | #define gcc_vmacro3(first, args...) fun3(first, args)
+      |                                ^~~
+C:\Users\hemac\Downloads\textConcordance-project\cmake-build-debug\_deps\curl-src\CMake\CurlTests.c:496:32: warning: ISO C does not permit named variadic macros [-Wvariadic-macros]
+  496 | #define gcc_vmacro2(first, args...) fun2(first, args)
+      |                                ^~~
+C:\Users\hemac\Downloads\textConcordance-project\cmake-build-debug\_deps\curl-src\CMake\CurlTests.c:509:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+  509 | main() {
+      | ^~~~
+Linking C executable cmTC_dcb51.exe
+"C:\Program Files\JetBrains\CLion 2024.3.2\bin\cmake\win\x64\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_dcb51.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2024.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_dcb51.dir/objects.a
+C:\msys\mingw64\bin\ar.exe qc CMakeFiles\cmTC_dcb51.dir/objects.a @CMakeFiles\cmTC_dcb51.dir\objects1.rsp
+C:\msys\mingw64\bin\cc.exe  -pedantic -Wall -W -Wpointer-arith -Wwrite-strings -Wunused -Wshadow -Winline -Wnested-externs -Wmissing-declarations -Wmissing-prototypes -Wfloat-equal -Wsign-compare -Wundef -Wendif-labels -Wstrict-prototypes -Wdeclaration-after-statement -Wstrict-aliasing=3 -Wcast-align -Wtype-limits -Wold-style-declaration -Wmissing-parameter-type -Wempty-body -Wclobbered -Wignored-qualifiers -Wconversion -Wvla -Wdouble-promotion -Wno-long-long -Wno-multichar -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wno-pedantic-ms-format -DHAVE_VARIADIC_MACROS_GCC  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_STDIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_PROCESS_H -DHAVE_STDDEF_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -Wl,--whole-archive CMakeFiles\cmTC_dcb51.dir/objects.a -Wl,--no-whole-archive -o cmTC_dcb51.exe -Wl,--out-implib,libcmTC_dcb51.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_dcb51.dir\linkLibs.rsp
+mingw32-make.exe[2]: Leaving directory 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe[1]: Leaving directory 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Performing Curl Test HAVE_CLOCK_GETTIME_MONOTONIC passed with the following output:
+Change Dir: 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.3.2/bin/cmake/win/x64/bin/cmake.exe" -E env VERBOSE=1 C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_901a8/fast
+mingw32-make.exe[1]: Entering directory 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\cmTC_901a8.dir\build.make CMakeFiles/cmTC_901a8.dir/build
+mingw32-make.exe[2]: Entering directory 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_901a8.dir/CurlTests.c.obj
+C:\msys\mingw64\bin\cc.exe   -pedantic -Wall -W -Wpointer-arith -Wwrite-strings -Wunused -Wshadow -Winline -Wnested-externs -Wmissing-declarations -Wmissing-prototypes -Wfloat-equal -Wsign-compare -Wundef -Wendif-labels -Wstrict-prototypes -Wdeclaration-after-statement -Wstrict-aliasing=3 -Wcast-align -Wtype-limits -Wold-style-declaration -Wmissing-parameter-type -Wempty-body -Wclobbered -Wignored-qualifiers -Wconversion -Wvla -Wdouble-promotion -Wno-long-long -Wno-multichar -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wno-pedantic-ms-format -DHAVE_CLOCK_GETTIME_MONOTONIC  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_STDIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_PROCESS_H -DHAVE_STDDEF_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -o CMakeFiles\cmTC_901a8.dir\CurlTests.c.obj -c C:\Users\hemac\Downloads\textConcordance-project\cmake-build-debug\_deps\curl-src\CMake\CurlTests.c
+C:\Users\hemac\Downloads\textConcordance-project\cmake-build-debug\_deps\curl-src\CMake\CurlTests.c:458:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+  458 | main() {
+      | ^~~~
+Linking C executable cmTC_901a8.exe
+"C:\Program Files\JetBrains\CLion 2024.3.2\bin\cmake\win\x64\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_901a8.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2024.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_901a8.dir/objects.a
+C:\msys\mingw64\bin\ar.exe qc CMakeFiles\cmTC_901a8.dir/objects.a @CMakeFiles\cmTC_901a8.dir\objects1.rsp
+C:\msys\mingw64\bin\cc.exe  -pedantic -Wall -W -Wpointer-arith -Wwrite-strings -Wunused -Wshadow -Winline -Wnested-externs -Wmissing-declarations -Wmissing-prototypes -Wfloat-equal -Wsign-compare -Wundef -Wendif-labels -Wstrict-prototypes -Wdeclaration-after-statement -Wstrict-aliasing=3 -Wcast-align -Wtype-limits -Wold-style-declaration -Wmissing-parameter-type -Wempty-body -Wclobbered -Wignored-qualifiers -Wconversion -Wvla -Wdouble-promotion -Wno-long-long -Wno-multichar -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wno-pedantic-ms-format -DHAVE_CLOCK_GETTIME_MONOTONIC  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_STDIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_PROCESS_H -DHAVE_STDDEF_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -Wl,--whole-archive CMakeFiles\cmTC_901a8.dir/objects.a -Wl,--no-whole-archive -o cmTC_901a8.exe -Wl,--out-implib,libcmTC_901a8.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_901a8.dir\linkLibs.rsp
+mingw32-make.exe[2]: Leaving directory 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe[1]: Leaving directory 'C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+

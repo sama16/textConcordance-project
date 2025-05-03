@@ -1,3 +1,3 @@
-/Users/malakmoustafa/CLionProjects/textConcordance-project/cmake-build-debug/CMakeFiles/untitled3.dir
-/Users/malakmoustafa/CLionProjects/textConcordance-project/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/malakmoustafa/CLionProjects/textConcordance-project/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/untitled3.dir
+C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug/CMakeFiles/rebuild_cache.dir

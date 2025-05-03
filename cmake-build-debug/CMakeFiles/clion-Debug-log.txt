@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /Users/malakmoustafa/CLionProjects/textConcordance-project -B /Users/malakmoustafa/CLionProjects/textConcordance-project/cmake-build-debug
--- Configuring done (0.0s)
--- Generating done (0.0s)
--- Build files have been written to: /Users/malakmoustafa/CLionProjects/textConcordance-project/cmake-build-debug
+"C:\Program Files\JetBrains\CLion 2024.3.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "MinGW Makefiles" -S C:\Users\hemac\Downloads\textConcordance-project -B C:\Users\hemac\Downloads\textConcordance-project\cmake-build-debug
+-- Configuring done (1.3s)
+-- Generating done (0.7s)
+-- Build files have been written to: C:/Users/hemac/Downloads/textConcordance-project/cmake-build-debug
