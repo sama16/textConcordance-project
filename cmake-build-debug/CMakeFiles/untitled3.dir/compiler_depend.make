@@ -21,6 +21,7 @@ CMakeFiles/untitled3.dir/avl_tree.cpp.obj: C:/Users/hemac/Downloads/textConcorda
   C:/msys/mingw64/include/c++/14.2.0/bits/basic_string.tcc \
   C:/msys/mingw64/include/c++/14.2.0/bits/char_traits.h \
   C:/msys/mingw64/include/c++/14.2.0/bits/charconv.h \
+  C:/msys/mingw64/include/c++/14.2.0/bits/codecvt.h \
   C:/msys/mingw64/include/c++/14.2.0/bits/concept_check.h \
   C:/msys/mingw64/include/c++/14.2.0/bits/cpp_type_traits.h \
   C:/msys/mingw64/include/c++/14.2.0/bits/cxxabi_forced.h \
@@ -29,6 +30,7 @@ CMakeFiles/untitled3.dir/avl_tree.cpp.obj: C:/Users/hemac/Downloads/textConcorda
   C:/msys/mingw64/include/c++/14.2.0/bits/exception.h \
   C:/msys/mingw64/include/c++/14.2.0/bits/exception_defines.h \
   C:/msys/mingw64/include/c++/14.2.0/bits/exception_ptr.h \
+  C:/msys/mingw64/include/c++/14.2.0/bits/fstream.tcc \
   C:/msys/mingw64/include/c++/14.2.0/bits/functexcept.h \
   C:/msys/mingw64/include/c++/14.2.0/bits/functional_hash.h \
   C:/msys/mingw64/include/c++/14.2.0/bits/hash_bytes.h \
@@ -61,6 +63,7 @@ CMakeFiles/untitled3.dir/avl_tree.cpp.obj: C:/Users/hemac/Downloads/textConcorda
   C:/msys/mingw64/include/c++/14.2.0/bits/ranges_util.h \
   C:/msys/mingw64/include/c++/14.2.0/bits/refwrap.h \
   C:/msys/mingw64/include/c++/14.2.0/bits/requires_hosted.h \
+  C:/msys/mingw64/include/c++/14.2.0/bits/sstream.tcc \
   C:/msys/mingw64/include/c++/14.2.0/bits/std_abs.h \
   C:/msys/mingw64/include/c++/14.2.0/bits/stl_algo.h \
   C:/msys/mingw64/include/c++/14.2.0/bits/stl_algobase.h \
@@ -109,6 +112,7 @@ CMakeFiles/untitled3.dir/avl_tree.cpp.obj: C:/Users/hemac/Downloads/textConcorda
   C:/msys/mingw64/include/c++/14.2.0/ext/numeric_traits.h \
   C:/msys/mingw64/include/c++/14.2.0/ext/string_conversions.h \
   C:/msys/mingw64/include/c++/14.2.0/ext/type_traits.h \
+  C:/msys/mingw64/include/c++/14.2.0/fstream \
   C:/msys/mingw64/include/c++/14.2.0/initializer_list \
   C:/msys/mingw64/include/c++/14.2.0/ios \
   C:/msys/mingw64/include/c++/14.2.0/iosfwd \
@@ -122,6 +126,7 @@ CMakeFiles/untitled3.dir/avl_tree.cpp.obj: C:/Users/hemac/Downloads/textConcorda
   C:/msys/mingw64/include/c++/14.2.0/pstl/glue_algorithm_defs.h \
   C:/msys/mingw64/include/c++/14.2.0/pstl/pstl_config.h \
   C:/msys/mingw64/include/c++/14.2.0/queue \
+  C:/msys/mingw64/include/c++/14.2.0/sstream \
   C:/msys/mingw64/include/c++/14.2.0/stdexcept \
   C:/msys/mingw64/include/c++/14.2.0/stdlib.h \
   C:/msys/mingw64/include/c++/14.2.0/streambuf \
@@ -133,8 +138,10 @@ CMakeFiles/untitled3.dir/avl_tree.cpp.obj: C:/Users/hemac/Downloads/textConcorda
   C:/msys/mingw64/include/c++/14.2.0/typeinfo \
   C:/msys/mingw64/include/c++/14.2.0/vector \
   C:/msys/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
+  C:/msys/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/basic_file.h \
   C:/msys/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++allocator.h \
   C:/msys/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \
+  C:/msys/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++io.h \
   C:/msys/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++locale.h \
   C:/msys/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/msys/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_base.h \
@@ -434,6 +441,10 @@ C:/msys/mingw64/include/c++/14.2.0/bits/basic_string.tcc:
 
 C:/msys/mingw64/include/c++/14.2.0/bits/char_traits.h:
 
+C:/msys/mingw64/include/c++/14.2.0/exception:
+
+C:/msys/mingw64/include/c++/14.2.0/bits/codecvt.h:
+
 C:/msys/mingw64/include/c++/14.2.0/cstdio:
 
 C:/msys/mingw64/include/c++/14.2.0/bits/concept_check.h:
@@ -447,10 +458,6 @@ C:/msys/mingw64/include/c++/14.2.0/bits/ranges_util.h:
 C:/msys/mingw64/include/c++/14.2.0/bits/vector.tcc:
 
 C:/msys/mingw64/include/c++/14.2.0/bits/cxxabi_forced.h:
-
-C:/msys/mingw64/include/sdks/_mingw_ddk.h:
-
-C:/msys/mingw64/include/c++/14.2.0/bits/stl_algobase.h:
 
 C:/msys/mingw64/include/c++/14.2.0/bits/range_access.h:
 
@@ -466,6 +473,8 @@ C:/msys/mingw64/include/c++/14.2.0/bits/ranges_algo.h:
 
 C:/msys/mingw64/include/c++/14.2.0/bits/exception_ptr.h:
 
+C:/msys/mingw64/include/c++/14.2.0/bits/fstream.tcc:
+
 C:/msys/mingw64/include/c++/14.2.0/bits/iterator_concepts.h:
 
 C:/msys/mingw64/include/ctype.h:
@@ -480,11 +489,11 @@ C:/msys/mingw64/include/c++/14.2.0/bits/istream.tcc:
 
 C:/msys/mingw64/include/c++/14.2.0/bits/locale_classes.tcc:
 
-C:/msys/mingw64/include/c++/14.2.0/bits/max_size_type.h:
+C:/msys/mingw64/include/c++/14.2.0/bits/locale_facets.h:
 
 C:/msys/mingw64/include/c++/14.2.0/bits/sstream.tcc:
 
-C:/msys/mingw64/include/c++/14.2.0/bits/locale_facets.h:
+C:/msys/mingw64/include/c++/14.2.0/bits/max_size_type.h:
 
 C:/msys/mingw64/include/c++/14.2.0/bits/localefwd.h:
 
@@ -523,6 +532,10 @@ C:/msys/mingw64/include/c++/14.2.0/bits/requires_hosted.h:
 C:/msys/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h:
 
 C:/msys/mingw64/include/c++/14.2.0/bits/stl_algo.h:
+
+C:/msys/mingw64/include/sdks/_mingw_ddk.h:
+
+C:/msys/mingw64/include/c++/14.2.0/bits/stl_algobase.h:
 
 C:/msys/mingw64/include/c++/14.2.0/bits/stl_bvector.h:
 
@@ -600,10 +613,6 @@ C:/msys/mingw64/include/c++/14.2.0/cwctype:
 
 C:/msys/mingw64/include/c++/14.2.0/debug/debug.h:
 
-C:/msys/mingw64/include/c++/14.2.0/bits/codecvt.h:
-
-C:/msys/mingw64/include/c++/14.2.0/exception:
-
 C:/msys/mingw64/include/c++/14.2.0/string:
 
 C:/msys/mingw64/include/c++/14.2.0/ext/aligned_buffer.h:
@@ -615,6 +624,8 @@ C:/msys/mingw64/include/c++/14.2.0/ext/atomicity.h:
 C:/msys/mingw64/include/c++/14.2.0/ext/numeric_traits.h:
 
 C:/msys/mingw64/include/c++/14.2.0/ext/type_traits.h:
+
+C:/msys/mingw64/include/c++/14.2.0/fstream:
 
 C:/msys/mingw64/include/c++/14.2.0/initializer_list:
 
@@ -659,6 +670,8 @@ C:/msys/mingw64/include/c++/14.2.0/vector:
 C:/msys/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/atomic_word.h:
 
 C:/msys/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++allocator.h:
+
+C:/msys/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++io.h:
 
 C:/msys/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++locale.h:
 
@@ -727,9 +740,3 @@ C:/msys/mingw64/include/wctype.h:
 C:/msys/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mm_malloc.h:
 
 C:/msys/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/syslimits.h:
-
-C:/msys/mingw64/include/c++/14.2.0/bits/fstream.tcc:
-
-C:/msys/mingw64/include/c++/14.2.0/fstream:
-
-C:/msys/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++io.h:

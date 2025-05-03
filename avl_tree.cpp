@@ -1,6 +1,8 @@
 #include "avl_tree.h"
 #include <cctype>
 #include <algorithm>
+#include <fstream>
+#include <sstream>
 
 AVLTree::AVLTree() : root(nullptr) {}
 
@@ -207,34 +209,27 @@ void Dictionarry::insert(const string word[]) {
 
 // Load predefined synonyms
 void Dictionarry::my_library() {
-    string word1[] = {"happy", "joyful", "content", "cheerful", "pleased", "elated", "blissful", "", "", ""};
-string word2[] = {"sad", "unhappy", "sorrowful", "melancholy", "downcast", "dismal", "blue", "", "", ""};
-string word3[] = {"fast", "quick", "rapid", "speedy", "swift", "hasty", "brisk", "", "", ""};
-string word4[] = {"strong", "powerful", "robust", "sturdy", "resilient", "tough", "vigorous", "", "", ""};
-string word5[] = {"smart", "intelligent", "clever", "bright", "brilliant", "sharp", "wise", "", "", ""};
-string word6[] = {"beautiful", "attractive", "pretty", "lovely", "gorgeous", "stunning", "handsome", "", "", ""};
-string word7[] = {"big", "large", "huge", "massive", "gigantic", "immense", "enormous", "", "", ""};
-string word8[] = {"small", "tiny", "miniature", "petite", "diminutive", "compact", "little", "", "", ""};
-string word9[] = {"funny", "amusing", "humorous", "entertaining", "hilarious", "witty", "comical", "", "", ""};
-string word10[] = {"quick", "fast", "swift", "rapid", "speedy", "hasty", "brisk", "", "", ""};
-string word11[] = {"quiet", "silent", "calm", "peaceful", "still", "hushed", "mute"};
+    std::ifstream infile("synonyms");
+    std::string line;
 
+    while (std::getline(infile, line)) {
+        std::istringstream iss(line);
+        std::vector<std::string> words;
+        std::string word;
 
+        // Extract each word from the line
+        while (iss >> word) {
+            words.push_back(word);
+        }
 
+        // Fill an array of fixed size with synonyms (pad with empty strings if less than 10)
+        std::string wordArray[10] = {""};
+        for (size_t i = 0; i < words.size() && i < 10; ++i) {
+            wordArray[i] = words[i];
+        }
 
-    insert(word1);
-    insert(word2);
-    insert(word3);
-    insert(word4);
-    insert(word5);
-    insert(word6);
-    insert(word7);
-    insert(word8);
-    insert(word9);
-    insert(word10);
-    insert(word11);
-
-
+        insert(wordArray); // Pass the array to your existing insert function
+    }
 }
 
 // Display helper
