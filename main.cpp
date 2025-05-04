@@ -47,10 +47,15 @@ int main(int argc, char* argv[]) {
     inputFile.close();  // Close the input file
 
     // Display the concordance (AVL Tree) content
+    cout << " This is the frequency of each word given in the file" << endl;
     concordance.display();
+    cout << endl;
+cout << " please enter what is the minimum number of repetitions for a word to start changing it"<<endl;
+    int minimum_repetitions;
+    cin >> minimum_repetitions;
 
     // Find and replace words exceeding the threshold with synonyms
-    concordance.findWordsExceedingThreshold(2, argc, argv);
+    concordance.findWordsExceedingThreshold(minimum_repetitions, argc, argv);
 
     // Optional: If you need to work with the dictionary, uncomment these lines
     // d1.my_library();

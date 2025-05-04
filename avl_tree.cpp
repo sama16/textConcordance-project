@@ -196,7 +196,8 @@ void AVLTree::change_the_text(int argc, char* argv[], const string& word) {
         }
         cout << endl;
     } else {
-        cout << "No synonyms found for '" << word << "'." << endl;
+        cout << " The word '"<< word<< "' is repeated many times. However, ";
+        cout << "no synonyms found in the library for '" << word << "'." << endl;
     }
 
     // Prepare to process words
@@ -235,7 +236,7 @@ void AVLTree::change_the_text(int argc, char* argv[], const string& word) {
     }
 
     outFile.close();
-    cout << "Text modified and saved to text" << endl;
+    cout << "Text modified and saved " << endl;
 }
 
 
@@ -340,7 +341,7 @@ bool Dictionarry::search(Node* node, const string& word, string wordy[], int& wo
     for (int i = 0; i < node->count; ++i) {
         if (node->arr[i] == word) {
             // Word found in this node
-            std::cout << " the word "<< word <<" is repeated many times, use one of these synonyms to make the text better"<<endl;
+            std::cout << " the word "<< word <<" is repeated many times, the system will use one of these synonyms to make the text better"<<endl;
             std::cout << "Synonyms for \"" << word << "\": ";
             for (int j = 0; j < node->count; ++j) {
                 if (node->arr[j] != word) {
@@ -404,10 +405,3 @@ string* Dictionarry::getSynonyms(Node* node, const string& word, string wordy[],
 
     return getSynonyms(node->right, word, wordy, wordyCount);
 }
-
-
-
-
-
-
-

@@ -1,1 +1,1 @@
-This is a simple example. This example is just for testing. The easy test is useful. 
+This is an important example. This example is just critical and crucial for testing. The necessary test is straightforward. 
