@@ -119,15 +119,16 @@ void AVLTree::display() const {
     inOrder(root);
 }
 
-std::string AVLTree::cleanWord(const std::string& word) {
-    std::string cleaned;
-    for (char ch : word) {
-        if (std::isalpha(ch)) {
-            cleaned += std::tolower(ch);
-        }
+
+string AVLTree::cleanWord(const string& word) {
+    string cleanedWord = word;
+    // Remove punctuation
+    while (!cleanedWord.empty() && ispunct(cleanedWord.back())) {
+        cleanedWord.pop_back();
     }
-    return cleaned;
+    return cleanedWord;
 }
+
 Dictionarry::Node::Node(const string word[]) {
     count = 0;
     for (int i = 0; i < maxValue && !word[i].empty(); ++i) {
@@ -138,26 +139,106 @@ Dictionarry::Node::Node(const string word[]) {
     right = nullptr;
 }
 // Traverse the AVL tree and call the search function for words that appear more than 2 times
-void AVLTree::findWordsExceedingThreshold(Node* node, int threshold) {
+void AVLTree::findWordsExceedingThreshold(Node* node, int threshold, int argc, char* argv[]) {
     if (!node) return;
 
     // Check the frequency of the current word
     if (node->frequency >= threshold) {
         // Call the search function to get synonyms of this word
         Dictionarry dictionary;
-        dictionary.my_library();// Assuming Dictionarry is available in your code
+        dictionary.my_library();
         dictionary.search(node->word);  // Retrieve and display synonyms
+        change_the_text(argc, argv, node->word); // Replace word in the text file
     }
 
     // Recursively check the left and right subtrees
-    findWordsExceedingThreshold(node->left, threshold);
-    findWordsExceedingThreshold(node->right, threshold);
+    findWordsExceedingThreshold(node->left, threshold, argc, argv);
+    findWordsExceedingThreshold(node->right, threshold, argc, argv);
 }
 
+
 // Wrapper function for convenience
-void AVLTree::findWordsExceedingThreshold(int threshold) {
-    findWordsExceedingThreshold(root, threshold);
+void AVLTree::findWordsExceedingThreshold(int threshold, int argc, char* argv[]) {
+    findWordsExceedingThreshold(root, threshold, argc, argv);
 }
+
+
+
+void AVLTree::change_the_text(int argc, char* argv[], const string& word) {
+    if (argc != 2) {
+        cerr << "Usage: " << argv[0] << " <input_file.txt>" << endl;
+        exit(1);
+    }
+
+    // Open input file
+    ifstream inputFile(argv[1]);
+    if (!inputFile.is_open()) {
+        cerr << "Error opening file: " << argv[1] << endl;
+        exit(1);
+    }
+
+    // Load entire content into a string
+    stringstream buffer;
+    buffer << inputFile.rdbuf();
+    string content = buffer.str();
+    inputFile.close();
+
+    // Load synonyms
+    Dictionarry dictionary;
+    dictionary.my_library();
+    string* synonyms = dictionary.getSynonyms(word);
+    int synonymCount = dictionary.wordyCount;
+
+    if (synonymCount > 0) {
+        cout << "Found " << synonymCount << " synonyms for '" << word << "': ";
+        for (int i = 0; i < synonymCount; ++i) {
+            cout << synonyms[i] << " ";
+        }
+        cout << endl;
+    } else {
+        cout << "No synonyms found for '" << word << "'." << endl;
+    }
+
+    // Prepare to process words
+    stringstream wordStream(content);
+    ofstream outFile("text");
+    if (!outFile.is_open()) {
+        cerr << "Error creating output file." << endl;
+        exit(1);
+    }
+
+    srand(time(nullptr)); // Seed for randomness
+    string token;
+    int occurrence = 0;
+
+    while (wordStream >> token) {
+        string original = token;
+        string trailingPunct = "";
+
+        // Remove trailing punctuation
+        while (!original.empty() && ispunct(original.back())) {
+            trailingPunct = original.back() + trailingPunct;
+            original.pop_back();
+        }
+
+        string modifiedWord = original;
+
+        if (original == word) {
+            occurrence++;
+            if (occurrence > 1 && synonymCount > 0) {
+                modifiedWord = synonyms[rand() % synonymCount];
+            }
+        }
+
+        // Write modified word and reattach punctuation
+        outFile << modifiedWord + trailingPunct << " ";
+    }
+
+    outFile.close();
+    cout << "Text modified and saved to text" << endl;
+}
+
+
 
 // Constructor for Dictionarry
 Dictionarry::Dictionarry() {
@@ -263,6 +344,7 @@ bool Dictionarry::search(Node* node, const string& word, string wordy[], int& wo
             std::cout << "Synonyms for \"" << word << "\": ";
             for (int j = 0; j < node->count; ++j) {
                 if (node->arr[j] != word) {
+                    wordy[wordyCount++] = node->arr[j];  // store synonym
                     std::cout << node->arr[j];
                     if (j < node->count - 1) std::cout << ", ";
                 }
@@ -288,3 +370,44 @@ bool Dictionarry::search(const string& word) {
 
     return result;
 }
+string* Dictionarry::getSynonyms(const string& word) {
+    static string wordy[100];
+    wordyCount = 0;
+    getSynonyms(root, word, wordy, wordyCount);
+    return wordy;
+}
+
+string* Dictionarry::getSynonyms(Node* node, const string& word, string wordy[], int& wordyCount) {
+    if (!node) return nullptr;
+
+    // Step 1: Check if the word exists in this node
+    for (int i = 0; i < node->count; ++i) {
+        if (node->arr[i] == word) {
+            // Word found in this node
+            std::cout << "The word '" << word << "' is repeated many times. Use one of these synonyms to make the text better:" << std::endl;
+            std::cout << "Synonyms for \"" << word << "\": ";
+            for (int j = 0; j < node->count; ++j) {
+                if (node->arr[j] != word) {
+                    wordy[wordyCount++] = node->arr[j];  // store synonym
+                    std::cout << node->arr[j];
+                    if (j < node->count - 1) std::cout << ", ";
+                }
+            }
+            std::cout << std::endl;
+            return wordy;
+        }
+    }
+
+    // Step 2: Recursively search left and right
+    string* result = getSynonyms(node->left, word, wordy, wordyCount);
+    if (result != nullptr) return result;
+
+    return getSynonyms(node->right, word, wordy, wordyCount);
+}
+
+
+
+
+
+
+

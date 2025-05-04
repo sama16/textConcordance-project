@@ -36,7 +36,9 @@ public:
     void display() const;
 
     static std::string cleanWord(const std::string& word);  // Static method for cleaning words
-    void findWordsExceedingThreshold(int threshold);
+void findWordsExceedingThreshold( int threshold, int argc, char* argv[]);
+    void change_the_text(int argc, char* argv[], const string& word);
+
 
 
 
@@ -48,7 +50,8 @@ private:
     int getHeight(Node* node);
     int getBalance(Node* node);
     void inOrder(Node* node) const;
-    void findWordsExceedingThreshold(Node* node, int threshold);
+    void findWordsExceedingThreshold(Node* node, int threshold,int argc, char* argv[]);
+
 };
 class Dictionarry {
 private:
@@ -69,6 +72,8 @@ private:
     void display(Node* node);
 private:
     bool search(Node* node, const std::string& word, std::string wordy[], int& wordyCount);
+    string* getSynonyms(Node* node, const string& word, string wordy[], int& wordyCount);
+
 
 public:
     Dictionarry();
@@ -79,6 +84,10 @@ public:
     void display2();
     void clear(Node* node); // helper for destructor
     bool search(const std::string& word);
+    int wordyCount;
+    string* getSynonyms(const string& word);
+
+
 
 };
 
