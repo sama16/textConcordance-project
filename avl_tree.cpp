@@ -201,7 +201,7 @@ void AVLTree::change_the_text(int argc, char* argv[], const string& word) {
 
     // Prepare to process words
     stringstream wordStream(content);
-    ofstream outFile("text");
+    ofstream outFile(argv[1]);
     if (!outFile.is_open()) {
         cerr << "Error creating output file." << endl;
         exit(1);
